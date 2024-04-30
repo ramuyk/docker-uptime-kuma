@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  uptime-kuma:
+    image: elestio/uptime-kuma
+    container_name: uptime-kuma
+    ports:
+      - "127.0.0.1:10040:3001"
+    volumes:
+      - uptime-kuma-data:/app/data  
+    restart: always
+
+volumes:
+  uptime-kuma-data:
